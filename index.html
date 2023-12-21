@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BetForge</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="top-bar">
+  <h1>BET <span class="orange-text">FORGE</span></h1>
+  <div class="top-bar">
+  <button id="withdraw">Withdraw</button>
+  <button id="deposit">Deposit</button>
+  <button id="balance">
+  <button class="profile-section">
+    <img src="profile-pic.png" alt="Profile" class="profile-pic">
+    <span class="username">Lee</span>
+    </div>
+    </div>
+    </div>
+</div>
+
+<div id="countdown">5.00</div>
+
+<div id="wheel">
+  <div class="fading-effect"></div> <!-- This will hold the fading blocks -->
+  <img src="red-line.png" alt="Winner Line" class="fixed-winner-line">
+  <!-- The scrolling text will be added here by JavaScript -->
+</div>
+
+<div id="betting-area">
+  <!-- <label for="bet-amount" id="bet-amount-label"></label> -->
+  <input type="number" id="bet-amount" value="" placeholder="$ Enter bet amount...">
+  <button class="bet-modifier" onclick="modifyBet('clear')">CLEAR</button>
+  <button class="bet-modifier" onclick="modifyBet(0.01)">+0.01</button>
+  <button class="bet-modifier" onclick="modifyBet(0.1)">+0.1</button>
+  <button class="bet-modifier" onclick="modifyBet(1)">+1</button>
+  <button class="bet-modifier" onclick="modifyBet(10)">+10</button>
+  <button class="bet-modifier" onclick="modifyBet(100)">+100</button>
+  <button class="bet-modifier" onclick="modifyBet('half')">1/2</button>
+  <button class="bet-modifier" onclick="modifyBet('double')">X2</button>
+  <button class="bet-modifier" onclick="modifyBet('max')">MAX</button>
+</div>
+
+</div>
+<div id="betting-area">
+  <button id="bet-heads" class="bet-button">PLACE BET HEADS</button>
+  <!-- <button id="bet-dice" class="bet-button">PLACE BET DICE</button> -->
+  <button id="bet-tails" class="bet-button">PLACE BET TAILS</button>
+</div>
+
+<div id="result"></div>
+
+<div id="bet-display">Your bet amount: $0.00</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

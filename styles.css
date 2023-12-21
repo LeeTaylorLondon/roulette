@@ -1,0 +1,303 @@
+body {
+  font-family: Flama-Medium,Flama,sans-serif;
+  text-align: center;
+  background-color: #1A1C24; /* Set the background color */
+  color: #9293A6; /* Set the text color */
+  margin: 0; /* Remove the default margin of the body */
+}
+
+/* Center the main content */
+.main-content {
+  text-align: center;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Adjust as needed for your design */
+  max-width: 100%; /* Or the max width you prefer for your layout */
+  background-color: #24252F; /* Slight grey background */
+  color: white; /* Ensures text is white */
+}
+
+.user-actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: right;
+    background-color: #222; /* Background color for the buttons bar */
+}
+
+#withdraw {
+    background-color: #24252F;
+    color: #9293A6;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+#deposit {
+    background-color: #E9B10E; /* Dark background for buttons */
+    font-weight: bold;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+#deposit:hover {
+    background-color: #FFCF42;
+}
+
+#withdraw:hover {
+    background-color: #555;
+}
+
+#balance-display {
+    color: gold; /* Gold color for balance display */
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    background-color: #333541;
+}
+
+.profile-pic {
+    width: 20px; /* Adjust as needed */
+    height: 20px; /* Adjust as needed */
+    border-radius: 50%; /* Circular profile picture */
+    margin-right: 5px;
+}
+
+.username {
+    color: white;
+    font-family: Flama-Medium,Flama,sans-serif;
+    padding: 0;
+    font-size: 12px;
+}
+
+/* Container for the bet amount and betting buttons */
+.bet-container {
+  display: inline-block;
+  margin: 20px 0; /* Spacing above and below the betting area */
+}
+
+.betting-area {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.bet-modifier {
+  background-color: #333541; /* Dark background */
+  color: #9293A6; /* Light text */
+  border: none;
+  padding: 6px 5px;
+  margin-left: 0px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 0px;
+}
+
+.bet-modifier:hover {
+  background-color: #373A47; /* Lighter on hover */
+  color: #ffffff; /* Light text */
+}
+
+.bet-modifier:active {
+  background-color: #666; /* Even lighter on click */
+}
+
+/* Individual elements like the bet amount input and betting buttons should be inline-blocks */
+.bet-button {
+  display: inline-block;
+  margin-right: 10px; /* Spacing between the input and buttons */
+  text-align: left;
+}
+
+/* Optionally, you can increase the specificity if necessary */
+#betting-area .bet-button.bet-placed {
+  border: 2px solid #E9B10E; /* Yellow border */
+  position: relative; /* Position relative for pseudo-element positioning */
+  background-color: #141419;
+  
+}
+
+/* Add styles for the bet amount */
+#betting-area .bet-button.bet-placed::after {
+  content: attr(data-bet-amount); /* Use the data attribute for content */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #E9B10E; /* Yellow text */
+}
+
+/* Style for the result and rolling status */
+.result-status {
+  margin-top: 20px; /* Spacing below the buttons */
+}
+
+#result, #bet-display {
+  margin: 10px 0;
+  font-size: 0px;
+  font-family: Flama-Medium,Flama,sans-serif;
+  color: #1A1C24;
+}
+
+#countdown {
+  margin: 10px 0;
+  font-size: 28px;
+  font-variant-numeric: tabular-nums;
+  font-family: Flama-Medium,Flama,sans-serif;
+  color: white;
+}
+
+#betting-area {
+  margin: 15px 0;
+  padding: 35px;
+}
+
+/* General button styles */
+button {
+  text-align: left;
+  background-color: #333541; /* Dark background */
+  color: white; /* Light text */
+  border: none; /* Remove default border */
+  padding: 15px 120px; /* Some padding */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Cursor to pointer */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  font-family: Flama-Medium,Flama,sans-serif;
+}
+
+/* Hover effect */
+button:hover {
+  background-color: #373A47; /* Slightly lighter on hover */
+}
+
+/* Active/Click effect */
+button:active {
+  background-color: #666; /* Even lighter on click */
+}
+
+#betting-area button {
+  margin: 0 0px;
+}
+
+#bet-amount {
+  background-color: #141419; /* Dark background */
+  border: 1px solid #555; /* Slightly lighter border */
+  color: #ffffff; /* Text color */
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  display: inline-block;
+  
+  font-family: Flama-Medium,Flama,sans-serif;
+}
+
+#bet-amount-label {
+  background-image: url('coins.png'); /* Replace with the path to your coin image */
+  background-size: contain; /* Or 'cover' depending on your preference */
+  background-repeat: no-repeat;
+  display: inline-block; /* Adjust display to align with the input */
+  width: 40px; /* Adjust width as necessary */
+  height: 22px; /* Adjust height to match your input height */
+  cursor: pointer; /* Change cursor to pointer to indicate this is a label */
+}
+
+#wheel {
+  /* Make sure the container is tall enough for the larger text and the line */
+  height: 140px; /* Adjust as necessary */
+  position: relative;
+  overflow: hidden;
+  /* other properties */
+}
+
+.fading-effect::before,
+.fading-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1000px; /* Adjust the width of the fading effect as needed */
+  z-index: 2; /* Above the scrolling text but below the red line */
+}
+
+.fading-effect::before {
+  left: 0;
+  background: linear-gradient(to right, #1A1C24 0%, transparent 100%);
+}
+
+.fading-effect::after {
+  right: 0;
+  background: linear-gradient(to left, #1A1C24 0%, transparent 100%);
+}
+
+.orange-text {
+  color: orange; /* This applies the orange color to the text */
+}
+
+h1 {
+  text-align: left; /* Align the text to the left */
+  margin-left: 20px; /* Add some margin if needed for spacing from the edge */
+  color: #ffffff;
+  font-style: italic;
+}
+
+#balance {
+  text-align: right; /* Align the text to the left */
+  margin-left: 12px; /* Add some margin if needed for spacing from the edge */
+  margin-right: 14px;
+  color: orange;
+  font-weight: bold;
+  font-family: Flama-Medium,Flama,sans-serif;
+  font-size: 13px;
+  padding: 10px 20px;
+  background-color: #141419;
+}
+
+.orange {
+  color: orange; /* Set the desired orange color */
+}
+
+.fixed-winner-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  height: 100%;
+  width: 5px; /* Width of the image */
+  z-index: 9999;
+  transform: translateX(-50%); /* Centers the image on the container */
+}
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 125px;
+  position: relative;
+  z-index: 1;
+  /* The animation-fill-mode property is set to 'forwards' to keep the properties as defined in the last keyframe */
+  animation: scroll 12s ease-out forwards; /* Animation is defined here with the duration and fill mode */
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-10%); } /* This should move the text just out of view */
+}
+
